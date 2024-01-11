@@ -1,0 +1,46 @@
+html {
+    scroll-behavior: smooth;
+    background-color: #f4f2ee;
+
+}
+
+body {
+    background-color: #f4f2ee;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+.margin-left {
+    margin-left: .6px;
+}
+
+.back-ground-img {
+    min-height: 4em;
+    background-image: url('../images/bg.jpeg');
+    background-size: cover;
+}
+
+
+
+.over-layer {
+    position: relative;
+    top: 2em;
+    left: 0;
+    background-color: transparent;
+    display: flex;
+    z-index: 1000;
+}
+
+.divider {
+    height: .3px;
+    background-color: #bbb8b8;
+
+}
+
+.cru {
+    cursor: pointer;
+}

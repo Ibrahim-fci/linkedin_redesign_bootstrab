@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="shortcut icon"
+      href="../assets/images/icons8-linkedin-48.png"
+      type="image/x-icon"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>signup</title>
+    <link
+      rel="stylesheet"
+      href="../assets/js/bootstrap-5.3.2-dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../assets/css/fontawesome-free-6.5.1-web/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+  </head>
+  <body>
+    <!-----  navbar  ---------------------------------------------------------------------------->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+      <div class="row container links-container justify-content-between">
+        <a class="col-4 navbar-brand text-primary" href="#">
+          <div class="text-center">
+            <span class="text-primary fw-bolder fs-1">
+              linked
+              <img src="../assets/images/icons8-linkedin-48.png" />
+            </span>
+          </div>
+        </a>
+        <div class="col-4">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse text-center ms-5"
+            id="navbarSupportedContent"
+          >
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ps-5">
+              <li class="nav-item ps-3">
+                <i class="fa-solid fa-newspaper"></i>
+                <a class="nav-link" href="#">Articles</a>
+              </li>
+              <li class="nav-item ps-md-3">
+                <i class="fa-solid fa-users"></i>
+                <a class="nav-link" href="#">Pepole</a>
+              </li>
+
+              <li class="nav-item ps-md-3">
+                <i class="fa-solid fa-chalkboard"></i>
+                <a class="nav-link" href="#">Learning</a>
+              </li>
+
+              <li class="nav-item ps-3">
+                <i class="fa-solid fa-city"></i>
+                <a class="nav-link" href="#">Jobs</a>
+              </li>
+
+              <li class="nav-item ps-3">
+                <i class="fa-solid fa-right-to-bracket"></i>
+                <a class="nav-link" href="signin.html">Login</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="container" style="margin-top: 7em">
+      <div class="row justify-content-between">
+        <div
+          class="col-md-12 col-lg-4 my-5 bg-body-tertiary rounded-5 me-2"
+          style="max-height: 450px"
+        >
+          <div class="text-center fw-bolder fs-3 my-3 text-primary">Signup</div>
+          <div class="errors" id="errors"></div>
+
+          <form id="signup-form">
+            <div class="mb-3">
+              <input
+                type="email"
+                class="form-control rounded-5"
+                id="user-email"
+                aria-describedby="emailHelp"
+                placeholder="Enter email"
+                required
+              />
+              <div id="emailHelp" class="form-text">
+                We'll never share your email with anyone else.
+              </div>
+            </div>
+            <div class="mb-3">
+              <input
+                type="text"
+                class="form-control rounded-5"
+                id="username"
+                placeholder="User Name"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <input
+                type="password"
+                class="form-control rounded-5"
+                id="user-password"
+                placeholder="Password"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <select class="form-control rounded-5" id="user-gender">
+                <option value="male" selected>Male</option>
+                <option value="female">Female</option>
+              </select>
+            </div>
+            <div class="my-5 w-75 m-auto">
+              <button type="submit" class="btn btn-primary w-100 rounded-5">
+                Signup
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="col-md-12 col-lg-6 text-center my-5 d-none d-lg-block">
+          <div class="text-center my-5">
+            <img src="../assets/images/dxf91zhqd2z6b0bwg85ktm5s4.svg" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- bootstrap bundle -->
+    <script src="../assets/js/bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/signup.js"></script>
+  </body>
+</html>

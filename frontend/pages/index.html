@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="../assets/images/icons8-linkedin-100.png"
+      type="image/x-icon"
+    />
+    <title>Home</title>
+    <link
+      rel="stylesheet"
+      href="../assets/js/bootstrap-5.3.2-dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../assets/css/fontawesome-free-6.5.1-web/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+  </head>
+  <body>
+    <!-----  navbar  ---------------------------------------------------------------------------->
+    <nav
+      class="navbar navbar-expand-lg bg-body-tertiary fixed-top"
+      style="background-color: #666666"
+      dir="rtl"
+    >
+      <div class="container links-container">
+        <a class="navbar-brand text-primary fw-bolder" href="#">Linkedin</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse text-center ms-5"
+          id="navbarSupportedContent"
+        >
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 ps-5" dir="ltr">
+            <li class="nav-item">
+              <i class="fa-solid fa-house"></i>
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item ps-3">
+              <i class="fa-solid fa-users"></i>
+              <a class="nav-link" href="#">MyNetwork</a>
+            </li>
+            <li class="nav-item ps-3">
+              <i class="fa-solid fa-city"></i>
+              <a class="nav-link" href="#">Jobs</a>
+            </li>
+            <li class="nav-item ps-3">
+              <i class="fa-solid fa-message"></i>
+              <a class="nav-link" href="#">Messaging</a>
+            </li>
+            <li class="nav-item ps-md-3">
+              <i class="fa-solid fa-bell"></i>
+              <a class="nav-link" href="#">Notifications</a>
+            </li>
+
+            <!-- <li class="nav-item ps-md-3">
+              <i class="fa-solid fa-user"></i>
+              <a class="nav-link" href="#">Me</a>
+            </li> -->
+
+            <li class="nav-item ps-3" onclick="logout()">
+              <i class="fa-solid fa-right-to-bracket"></i>
+              <a class="nav-link" href="#">Logout</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control ms-2 p-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+              dir="ltr"
+            />
+            <!-- <button class="btn btn-outline-primary" type="submit"> -->
+            <a href="#">
+              <img src="../assets/images/icons8-linkedin-48.png" />
+            </a>
+            <!-- </button> -->
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container w-100" style="margin-top: 7em">
+      <div class="row justify-content-center">
+        <!-----  left side  ---------------------------------------------------------------------------->
+
+        <div class="col-lg-3 mb-4">
+          <section
+            class="row top-left-side w-100 bg-bodygoogle-tertiary rounded-3"
+          >
+            <div class="back-ground-img bg-black">
+              <div class="over-layer d-flex justify-content-center">
+                <img
+                  src="../assets/images/me.jpg"
+                  class="rounded-circle"
+                  style="width: 4em; height: 4em"
+                />
+              </div>
+            </div>
+            <div class="row justify-content-center w-100 mt-5 text-center">
+              <h4 id="user-name-id">Ibrahim Ismail</h4>
+              <p class="text-body-tertiary" id="user-email-id">
+                Software Developer
+              </p>
+            </div>
+            <div class="divider w-100 my-3"></div>
+            <div class="row px-3 py-2">
+              <div class="col-10">profile viewers</div>
+              <div class="col-2 text-primary">28</div>
+            </div>
+            <div class="row px-3 py-2 pt-1">
+              <div class="col-10">post impressions</div>
+              <div class="col-2 text-primary">76</div>
+            </div>
+            <div class="divider w-100 my-3"></div>
+            <div class="row px-3 py-2">
+              <div class="col-12">
+                <i class="fa-solid fa-bookmark pe-4"></i>
+                <span class="fw-bold">My itemes</span>
+              </div>
+            </div>
+          </section>
+          <section
+            class="row boottom-left-side w-100 bg-body-tertiary rounded-3 mt-3 py-3 d-none d-lg-block"
+          >
+            <div class="col-12 pb-3"><span class="fw-bold">Groups</span></div>
+            <div class="col-12">
+              <i class="fa-brands fa-js pe-3"></i
+              ><span>javascript developers</span>
+            </div>
+            <div class="col-12 pt-2">
+              <i class="fa-brands fa-css3-alt pe-3"></i>
+              <span>css developers</span>
+            </div>
+            <div class="col-12 pt-2">
+              <i class="fa-solid fa-circle-info pe-3"></i
+              ><span>egyptian developers</span>
+            </div>
+          </section>
+        </div>
+        <div class="col-lg-8 col-xl-5 mb-4 margin-left">
+          <section class="row create-post w-100 bg-body-tertiary p-3 rounded-3">
+            <div class="col-3 text-center">
+              <img
+                src="../assets/images/me.jpg"
+                class="rounded-circle"
+                style="width: 4em; height: 4em"
+              />
+            </div>
+            <div class="col-9">
+              <div class="row form-floating mb-3">
+                <input
+                  type="text"
+                  class="form-control rounded-5"
+                  id="floatingInputDisabled"
+                  placeholder="name@example.com"
+                />
+                <label for="floatingInputDisabled">Start a Post</label>
+              </div>
+              <div class="row m-auto mt-4 text-center">
+                <div class="col-3"><i class="fa-solid fa-image"></i> img</div>
+                <div class="col-3"><i class="fa-solid fa-video"></i> ved</div>
+                <div class="col-3">
+                  <i class="fa-solid fa-bookmark"></i> sve
+                </div>
+                <div class="col-3">
+                  <i class="fa-solid fa-location-dot"></i> loc
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!----------- ALL POSTS SECTION-------------------------------------------------------------------->
+          <section class="posts">
+            <div class="row post w-100 bg-body-tertiary rounded-3 mt-3 p-3">
+              <div class="col-2 text-end">
+                <img
+                  src="../assets/images/person1.jpeg"
+                  class="rounded-circle"
+                  style="width: 4em; height: 4em"
+                  loading="lazy"
+                />
+              </div>
+              <div class="col-9">
+                <span>Samy Ibrahim</span>
+                <p class="text-body-tertiary m-0">PHP Fullstack Developer</p>
+                <p class="text-body-tertiary">
+                  <span class="pe-1">22m</span>
+                  <i class="fas fa-globe"></i>
+                </p>
+              </div>
+              <div class="col-12">
+                <p>
+                  Vzadi is looking for the following: 1- Back end (Node js) 2-
+                  front end ( React js) 3- UI / UX 4- Flutter If you are
+                  available to start immediately and have at least two years of
+                  experience, please submit your resume to
+                  <span class="text-primary">hr@vzadi.com</span> or<span
+                    class="text-primary"
+                  >
+                    reham.aboelmagd@vzadi.com</span
+                  >
+                  with the position title in the subject line. hashtag#copied
+                </p>
+              </div>
+              <div class="col-12 divider w-100 my-3"></div>
+              <div class="row post-footer justify-content-center text-center">
+                <div class="col-3 cru">
+                  <i class="fa-regular fa-thumbs-up text-primary"></i> Likes
+                </div>
+                <div class="col-3 cru">
+                  <i class="fa-regular fa-comment"></i> Comment
+                </div>
+                <div class="col-3 cru">
+                  <i class="fa-solid fa-signs-post"></i> Repost
+                </div>
+                <div class="col-3 cru">
+                  <i class="fa-regular fa-paper-plane"></i> Send
+                </div>
+              </div>
+            </div>
+
+            <div class="row post w-100 bg-body-tertiary rounded-3 mt-3 p-3">
+              <div class="col-2 text-end">
+                <img
+                  src="../assets/images/download.jpeg"
+                  class="rounded-circle"
+                  style="width: 4em; height: 4em"
+                />
+              </div>
+              <div class="col-9">
+                <span>Mohamed Ahmed</span>
+                <p class="text-body-tertiary m-0">Ui/Ux Designer</p>
+                <p class="text-body-tertiary">
+                  <span class="pe-1">22m</span>
+                  <i class="fas fa-globe"></i>
+                </p>
+              </div>
+              <div class="col-12">
+                <p>
+                  Vzadi is looking for the following: 1- Back end (Node js) 2-
+                  front end ( React js) 3- UI / UX 4- Flutter If you are
+                  available to start immediately and have at least two years of
+                  experience, please submit your resume to
+                  <span class="text-primary">hr@vzadi.com</span> or<span
+                    class="text-primary"
+                  >
+                    reham.aboelmagd@vzadi.com</span
+                  >
+                  with the position title in the subject line. hashtag#copied
+                </p>
+              </div>
+              <div class="col-12 p-0">
+                <img
+                  src="../assets/images/europeana-BFLLodG_ZDg-unsplash.jpg"
+                  class="w-100"
+                  loading="lazy"
+                />
+              </div>
+              <div class="col-12 divider w-100 my-3"></div>
+              <div class="row post-footer justify-content-center text-center">
+                <div class="col-3">
+                  <i class="fa-regular fa-thumbs-up"></i> Likes
+                </div>
+                <div class="col-3">
+                  <i class="fa-regular fa-comment"></i> Comment
+                </div>
+                <div class="col-3">
+                  <i class="fa-solid fa-signs-post"></i> Repost
+                </div>
+                <div class="col-3">
+                  <i class="fa-regular fa-paper-plane"></i> Send
+                </div>
+              </div>
+            </div>
+            <div class="row post w-100 bg-body-tertiary rounded-3 mt-3 p-3">
+              <div class="col-2 text-end">
+                <img
+                  src="../assets/images/me.jpg"
+                  class="rounded-circle"
+                  style="width: 4em; height: 4em"
+                  loading="lazy"
+                />
+              </div>
+              <div class="col-9">
+                <span>Ibrahim Ismail</span>
+                <p class="text-body-tertiary m-0">
+                  Software Developer | iti graduted
+                </p>
+                <p class="text-body-tertiary">
+                  <span class="pe-1">22m</span>
+                  <i class="fas fa-globe"></i>
+                </p>
+              </div>
+              <div class="col-12">
+                <p dir="rtl">
+                  الثقة بتتبني عن طريق الاستمرارية. عشان حد يثق فيك او عشان انت
+                  تثق في حد، لازم يكون فيه ثبات في المبدأ و استمرارية في الفعل.
+                  يعني لازم الشخص ده يكون رد فعله لاي حاجه تكون مبنية علي مبادئ
+                  معروفه و مفهومه و اهم من كده لازم تكون متوقعة. مش هتقدر تثق في
+                  حد لو انت مش قادر تتوقع رد فعله في مواقف لسه محصلتش. و عشان
+                  كده لو عايز تكسب ثقة حد، لازم تبين له انك صاحب مبادئ معينه و
+                  انك مستمر في تمسكك بيها. و ده لازم ياخد وقت.
+                  <span class="text-primary">ibrahimismail00000@gmail.com</span>
+                </p>
+              </div>
+
+              <div class="col-12 divider w-100 my-3"></div>
+              <div class="row post-footer justify-content-center text-center">
+                <div class="col-3">
+                  <i class="fa-regular fa-thumbs-up"></i> Likes
+                </div>
+                <div class="col-3">
+                  <i class="fa-regular fa-comment"></i> Comment
+                </div>
+                <div class="col-3">
+                  <i class="fa-solid fa-signs-post"></i> Repost
+                </div>
+                <div class="col-3">
+                  <i class="fa-regular fa-paper-plane"></i> Send
+                </div>
+              </div>
+            </div>
+
+            <div class="row post w-100 bg-body-tertiary rounded-3 mt-3 p-3">
+              <div class="col-2 text-end">
+                <img
+                  src="../assets/images/me.jpg"
+                  class="rounded-circle"
+                  style="width: 4em; height: 4em"
+                />
+              </div>
+              <div class="col-9">
+                <span>Ibrahim Ismail</span>
+                <p class="text-body-tertiary m-0">
+                  Software Developer | iti graduted
+                </p>
+                <p class="text-body-tertiary">
+                  <span class="pe-1">22m</span>
+                  <i class="fas fa-globe"></i>
+                </p>
+              </div>
+              <div class="col-12">
+                <p>
+                  Vzadi is looking for the following: 1- Back end (Node js) 2-
+                  front end ( React js) 3- UI / UX 4- Flutter If you are
+                  available to start immediately and have at least two years of
+                  experience, please submit your resume to
+                  <span class="text-primary">hr@vzadi.com</span> or<span
+                    class="text-primary"
+                  >
+                    reham.aboelmagd@vzadi.com</span
+                  >
+                  with the position title in the subject line. hashtag#copied
+                </p>
+              </div>
+              <div class="col-12 p-0">
+                <img
+                  src="../assets/images/mohamed-nohassi-weqeKcf5mMM-unsplash.jpg"
+                  class="w-100"
+                  loading="lazy"
+                />
+              </div>
+              <div class="col-12 divider w-100 my-3"></div>
+              <div class="row post-footer justify-content-center text-center">
+                <div class="col-3">
+                  <i class="fa-regular fa-thumbs-up"></i> Likes
+                </div>
+                <div class="col-3">
+                  <i class="fa-regular fa-comment"></i> Comment
+                </div>
+                <div class="col-3">
+                  <i class="fa-solid fa-signs-post"></i> Repost
+                </div>
+                <div class="col-3">
+                  <i class="fa-regular fa-paper-plane"></i> Send
+                </div>
+              </div>
+            </div>
+            <div class="row post w-100 bg-body-tertiary rounded-3 mt-3 p-3">
+              <div class="col-2 text-end">
+                <img
+                  src="../assets/images/download.jpeg"
+                  class="rounded-circle"
+                  style="width: 4em; height: 4em"
+                  loading="lazy"
+                />
+              </div>
+              <div class="col-9">
+                <span>Mohamed Ahmed</span>
+                <p class="text-body-tertiary m-0">Ui/Ux Designer @ _vois</p>
+                <p class="text-body-tertiary">
+                  <span class="pe-1">22m</span>
+                  <i class="fas fa-globe"></i>
+                </p>
+              </div>
+              <div class="col-12">
+                <p>
+                  Dear Mr. XYZ, Hope this mail finds you well , . I am
+                  interested in applying for ........ as I believe my
+                  substantial experience in .......... ABC ...has an excellent
+                  reputation for ........., I believe that I can make a
+                  significant contribution to your organisation. In particular,
+                  I have (اتكلم عن مؤهلاتك ومهاراتك باختصار) . My CV is
+                  attached, providing further information on how my career
+                  background meets your requirements. I would welcome the
+                  opportunity to meet with you in person to discuss this
+                  further. I look forward to hearing from you. Regards ABC
+                  (اسمك( . Tel: 01111111111( تليفونك)
+                  <span class="text-primary">hr@vzadi.com</span> or<span
+                    class="text-primary"
+                  >
+                    reham.aboelmagd@vzadi.com</span
+                  >
+                  with the position title in the subject line. hashtag#copied
+                </p>
+              </div>
+              <div class="col-12 p-0">
+                <img
+                  src="../assets/images/neom-U-L8q5pyj2U-unsplash.jpg"
+                  class="w-100"
+                  loading="lazy"
+                />
+              </div>
+              <div class="col-12 divider w-100 my-3"></div>
+              <div class="row post-footer justify-content-center text-center">
+                <div class="col-3">
+                  <i class="fa-regular fa-thumbs-up"></i> Likes
+                </div>
+                <div class="col-3">
+                  <i class="fa-regular fa-comment"></i> Comment
+                </div>
+                <div class="col-3">
+                  <i class="fa-solid fa-signs-post"></i> Repost
+                </div>
+                <div class="col-3">
+                  <i class="fa-regular fa-paper-plane"></i> Send
+                </div>
+              </div>
+            </div>
+
+            <div class="row post w-100 bg-body-tertiary rounded-3 mt-3 p-3">
+              <div class="col-2 text-end">
+                <img
+                  src="../assets/images/person1.jpeg"
+                  class="rounded-circle"
+                  style="width: 4em; height: 4em"
+                  loading="lazy"
+                />
+              </div>
+              <div class="col-9">
+                <span>Samy Ibrahim</span>
+                <p class="text-body-tertiary m-0">PHP Fullstack Developer</p>
+                <p class="text-body-tertiary">
+                  <span class="pe-1">1h</span>
+                  <i class="fas fa-globe"></i>
+                </p>
+              </div>
+              <div class="col-12">
+                <p>
+                  Fawry is hiring “ Business Analyst “ with the below
+                  requirements: B.sc in Computer Science or Engineering or
+                  relevant field is a must. 4+ years experience in Business
+                  Analysis & Software industry Previous working experience as a
+                  Business Analyst Previous experience in Fintech, Banking,
+                  Transaction processing, or Bill Payment is a plus. Work Type:
+                  Hybrid 3 days from office Location: Smart Village Egypt, Giza
+                  If you interested just share your updated CV to
+                  <span class="text-primary"> heba.yasser@fawry.com</span>
+                  mentioning the title in the subject.<span
+                    class="text-primary"
+                  >
+                    <br />
+                    #businessanalysis hashtag#software hashtag#fintech
+                    hashtag#fawry hashtag#openvacancies
+                  </span>
+                </p>
+              </div>
+              <div class="col-12 p-0">
+                <img
+                  src="../assets/images/neom-EbIvcXzgU4s-unsplash.jpg"
+                  class="w-100"
+                  loading="lazy"
+                />
+              </div>
+              <div class="col-12 divider w-100 my-3"></div>
+              <div class="row post-footer justify-content-center text-center">
+                <div class="col-3">
+                  <i class="fa-regular fa-thumbs-up"></i> Likes
+                </div>
+                <div class="col-3">
+                  <i class="fa-regular fa-comment"></i> Comment
+                </div>
+                <div class="col-3">
+                  <i class="fa-solid fa-signs-post"></i> Repost
+                </div>
+                <div class="col-3">
+                  <i class="fa-regular fa-paper-plane"></i> Send
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <!-----  right side  ---------------------------------------------------------------------------->
+
+        <div class="col-lg-3 mb-4 d-md-none d-lg-none d-xl-block">
+          <section class="row create-post w-100 bg-body-tertiary p-3 rounded-3">
+            <div class="col-12 pb-3">
+              <span class="fw-bold">Add to your feed</span>
+            </div>
+            <div class="row px-3 py-2">
+              <div class="col-4">
+                <img
+                  src="../assets/images/download.jpeg"
+                  class="rounded-circle"
+                  style="width: 3em; height: 3em"
+                  loading="lazy"
+                />
+              </div>
+              <div class="col-8">
+                <span>Mohamed Ahmed</span>
+                <p class="text-body-tertiary m-0">Ui/Ux Designer</p>
+                <button class="btn btn-outline-primary w-100 rounded-5">
+                  <i class="fa-solid fa-plus text-start pe-1"></i>
+                  Follow
+                </button>
+              </div>
+            </div>
+            <div class="row px-3 py-2">
+              <div class="col-4">
+                <img
+                  src="../assets/images/person1.jpeg"
+                  class="rounded-circle"
+                  style="width: 3em; height: 3em"
+                  loading="lazy"
+                />
+              </div>
+              <div class="col-8">
+                <span>Ahmed Samy</span>
+                <p class="text-body-tertiary m-0">PHP Developer</p>
+                <button class="btn btn-outline-primary w-100 rounded-5">
+                  <i class="fa-solid fa-plus text-start pe-1"></i>
+                  Follow
+                </button>
+              </div>
+            </div>
+            <div class="row px-3 py-2">
+              <div class="col-4">
+                <img
+                  src="../assets/images/me.jpg"
+                  class="rounded-circle"
+                  style="width: 3em; height: 3em"
+                  loading="lazy"
+                />
+              </div>
+              <div class="col-8">
+                <span>Mohamed Yasser</span>
+                <p class="text-body-tertiary m-0">JS Developer</p>
+                <button class="btn btn-outline-primary w-100 rounded-5">
+                  <i class="fa-solid fa-plus text-start pe-1"></i>
+                  Follow
+                </button>
+              </div>
+            </div>
+
+            <div class="divider w-100 my-3"></div>
+            <div class="row px-3 py-2">
+              <p class="col-12">
+                <span class="text-body-tertiary text-center pe-2"
+                  >View all recommendations</span
+                >
+                <i class="fa-solid fa-angle-right"></i>
+              </p>
+            </div>
+          </section>
+
+          <img
+            src="../assets/images/ad_linkedin.png"
+            class="row w-100 bg-body-tertiary rounded-3 mt-3"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- bootstrap bundle -->
+    <script src="../assets/js/bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/index.js"></script>
+  </body>
+</html>
